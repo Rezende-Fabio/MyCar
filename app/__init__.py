@@ -9,5 +9,6 @@ def crateApp():
     #Blueprint routes Main
     from .blueprints.Main import main
     app.register_blueprint(main)
+    
 
     return app
