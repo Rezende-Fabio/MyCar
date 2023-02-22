@@ -1,5 +1,6 @@
 from app import crateApp
 
 if __name__ == '__main__':
-    crateApp().run()
+    app = crateApp()
+    app.run(debug=True, use_reloader=True)
     
