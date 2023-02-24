@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleIndex.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <title>LOGIN</title>
 </head>
 <body>
-    TESTE
+    <div class="container-fluid centralizar">
+        <div class="card-login">
+            <form action="/login" class="container-fluid" method="POST">
+                <div class="container">
+                    <div class="img">
+                        <img style="width: 45%;" src="{{ url_for('static', filename='img/Logo car.png') }}">
+                    </div>
+                    <div class="row mb-3 justify-content-md-center">
+                        <div class="col-15 ">
+                            <label for="">Usuário:</label>
+                            <input type="text" class="form-control" name="usuario" id="usuario">
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-15">
+                            <label for="">Senha:</label>
+                            <input type="password" class="form-control" name="senha" id="senha">
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="btn margin-btn">
+                            <input type="submit" name="btnConfirmar" id="btnConfirmar" class="btn btn-outline-success btn-sm" value="Acessar"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="footer-card">
+                <a class="underlineHover" href="/esqueci-senha">Esqueceu a senha?</a>
+            </div>
+        </div>
+        <div class="cad">
+            <a class="underlineHover" href="/esqueci-senha">Cadastrar</a>
+        </div>
+    </div>
 </body>
 </html>
