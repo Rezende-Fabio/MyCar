@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/carro/styleCad.css') }}">
+{% endblock %}
+{% block conteudo %}
+    <div class="container-form centralizar">
+        <form class="container" action="/insert-baixa" method="POST">
+            <div class="container" id="cont1">
+                <div class="row mb-3">
+                    <h3>Cadastro de Carro</h3>
+                </div>
+                <div class="row justify-content-md-center mb-3">
+                    <div class="col-3">
+                        <label for="">Placa do Carro</label>
+                        <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                        tabindex="1" autocomplete="off" required >
+                    </div>
+                    <div class="col-3">
+                        <label for="">Ano</label>
+                        <input type="date" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                        tabindex="1" autocomplete="off" required>
+                    </div>
+                    <div class="col-3">
+                        <label for="">Marca</label>
+                        <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                        tabindex="1" autocomplete="off" required>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-3">
+                        <label for="">Modelo</label>
+                        <input type="text" class="form-control" style="text-transform: uppercase;" name="numDoc" id="numDoc" maxlength="40" size="40" 
+                        tabindex="1" autocomplete="off" required>
+                    </div>
+                </div> 
+                <div class="btn space-btn">
+                    <a class="btn btn-outline-danger" href="">Cancelar</a>
+                    <input type="submit" name="btnConfirmar" id="btnConfirmar" class="btn btn-outline-success" value="Cadastrar"/>
+                </div> 
+            </dv>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+
+
+.centralizar{
+    min-height: 100%;
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cont1{
+    background-color: #fff;
+    border-radius: 0.5rem ;
+    padding: 1rem;
+}
+
+
+.space-btn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

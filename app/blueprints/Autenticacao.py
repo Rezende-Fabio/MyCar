@@ -13,7 +13,7 @@ def login():
         user = User.query.filter_by(email=user, password=senha).first()
         login_user(user)
         
-        return render_template("base.html", user=user)
+        return redirect("/dashboard")
 
 
 @autenticacao.route('/logout')

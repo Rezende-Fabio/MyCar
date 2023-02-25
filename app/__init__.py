@@ -20,6 +20,9 @@ def create_app():
     
     from .blueprints.Main import main
     app.register_blueprint(main)
+
+    from .blueprints.Carro import carro
+    app.register_blueprint(carro)
     
     DB.init_app(app)
     
